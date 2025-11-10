@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class OrderService {
+
     private PaymentService paymentService;
 
     @Autowired
@@ -19,4 +20,5 @@ public class OrderService {
     public void setPaymentService(PaymentService paymentService) {
         this.paymentService = paymentService;
     }
+
 }
