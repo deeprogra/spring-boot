@@ -1,4 +1,4 @@
-package com.deeprogra.store;
+package com.deeprogra.store.model;
 
 import java.util.Objects;
 

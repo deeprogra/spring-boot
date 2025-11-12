@@ -1,4 +1,4 @@
-package com.deeprogra.store;
+package com.deeprogra.store.service;
 
 public class StripePaymentService implements PaymentService {
 
