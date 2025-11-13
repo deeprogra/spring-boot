@@ -1,4 +1,4 @@
-package com.deeprogra.store;
+package com.deeprogra.store.controller;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;

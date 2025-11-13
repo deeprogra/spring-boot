@@ -1,6 +1,9 @@
-package com.deeprogra.store;
+package com.deeprogra.store.service;
 
 import org.springframework.stereotype.Service;
+
+import com.deeprogra.store.model.Customer;
+import com.deeprogra.store.repository.CustomerRepository;
 
 import java.util.List;
 
