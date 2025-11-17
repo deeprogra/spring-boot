@@ -2,10 +2,12 @@ package com.deeprogra.store.service;
 
 import org.springframework.stereotype.Service;
 
+import com.deeprogra.store.exception.NoSuchCustomerExistsException;
 import com.deeprogra.store.model.Customer;
 import com.deeprogra.store.repository.CustomerRepository;
 
 import java.util.List;
+import java.util.NoSuchElementException;
 
 @Service
 public class CustomerService {
@@ -36,7 +38,7 @@ public class CustomerService {
 
     public Customer getCustomerById(Integer id) {
         return customerRepository.findById(id)
-                .orElseThrow(() -> new IllegalStateException(
+                .orElseThrow(() -> new NoSuchElementException(
                         id + " not found"));
     }
 
@@ -51,7 +53,7 @@ public class CustomerService {
 
     public void updateCustomer(Integer id, Customer update) {
         Customer customer = customerRepository.findById(id)
-                .orElseThrow(() -> new IllegalStateException(id + " not found"));
+                .orElseThrow(() -> new NoSuchCustomerExistsException(id + " not found"));
         customer.setName(update.getName());
         customer.setTechStack(update.getTechStack());
         customerRepository.save(customer);
