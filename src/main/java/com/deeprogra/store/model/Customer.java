@@ -7,10 +7,12 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.validation.constraints.Min;
+import jakarta.persistence.Table;
+// import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 
 @Entity
+@Table(name = "customer")
 public class Customer {
 
     @Id
@@ -20,7 +22,7 @@ public class Customer {
     @NotBlank(message = "Customer name cannot be blank")
     private String name;
 
-    @Min(value = 4, message = "Length must be at least 4")
+    // @Min(value = 4, message = "Length must be at least 4")
     private String techStack;
 
     @Column(columnDefinition = "TEXT")
